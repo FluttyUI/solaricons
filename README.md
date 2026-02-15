@@ -19,7 +19,7 @@ Add the dependency:
 
 ```yaml
 dependencies:
-  flutty_solar_icons: ^1.0.2
+  flutty_solar_icons: ^1.0.3
 ```
 
 Then run:
@@ -43,7 +43,17 @@ SolarIcon(
 
 ## Duotone and multi-layer usage
 
-Some icons use 2+ layers. You can provide extra colors optionally.
+Use only `color` and optional `secondaryColor`.
+
+Layer behavior:
+- Layer 1 uses `color`.
+- Layer 2 uses `secondaryColor` or `color.withAlpha(128)` if `secondaryColor` is not provided.
+- Layer 3 uses:
+  - `secondaryColor.withAlpha(64)` if `secondaryColor` is provided.
+  - otherwise `color.withAlpha(64)`.
+- Layer 4 uses:
+  - `secondaryColor.withAlpha(32)` if `secondaryColor` is provided.
+  - otherwise `color.withAlpha(32)`.
 
 ```dart
 SolarIcon(
@@ -51,8 +61,6 @@ SolarIcon(
   weight: SolarIconWeight.lineDuotone,
   color: const Color(0xFF1E293B),
   secondaryColor: const Color(0xFFF97316),
-  tertiaryColor: const Color(0xFF14B8A6),
-  quaternaryColor: const Color(0xFF8B5CF6),
   size: 28,
 )
 ```

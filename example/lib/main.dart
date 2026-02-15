@@ -31,8 +31,6 @@ class ExampleApp extends StatelessWidget {
                 weight: SolarIconWeight.boldDuotone,
                 color: Color(0xFF1E293B),
                 secondaryColor: Color(0xFFFB7185),
-                tertiaryColor: Color(0xFF34D399),
-                quaternaryColor: Color(0xFFF59E0B),
                 size: 36,
               ),
               SolarIcon(

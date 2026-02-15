@@ -16,13 +16,9 @@ class SolarIcon extends StatelessWidget {
   final Color? color;
 
   /// Secondary color for duotone icons.
+  ///
+  /// If not provided, duotone layer 2 uses `color.withAlpha(128)`.
   final Color? secondaryColor;
-
-  /// Optional tertiary color for icons that expose a third layer.
-  final Color? tertiaryColor;
-
-  /// Optional quaternary color for icons that expose a fourth layer.
-  final Color? quaternaryColor;
 
   /// Icon size in logical pixels.
   final double? size;
@@ -34,8 +30,6 @@ class SolarIcon extends StatelessWidget {
     this.weight = SolarIconWeight.linear,
     this.color,
     this.secondaryColor,
-    this.tertiaryColor,
-    this.quaternaryColor,
     this.size,
   });
 
@@ -54,29 +48,31 @@ class SolarIcon extends StatelessWidget {
 
     final layerChildren = <Widget>[];
     final placeTertiaryOnTop = _needsPrimaryBeforeTertiary(weight, icon.codePoint);
+    final derivedSecondaryColor = secondaryColor ?? color?.withAlpha(128);
+    final derivedOverlayBaseColor = secondaryColor ?? color;
+    final derivedTertiaryColor = derivedOverlayBaseColor?.withAlpha(64);
+    final derivedQuaternaryColor = derivedOverlayBaseColor?.withAlpha(32);
 
-    final layer4Color = quaternaryColor ?? tertiaryColor ?? secondaryColor;
     final layer4Family = _layerFamily(weight, 4);
-    if (layer4Color != null && layer4Family != null && _hasLayer(weight, 4)) {
+    if (derivedQuaternaryColor != null && layer4Family != null && _hasLayer(weight, 4)) {
       layerChildren.add(
         Icon(
           IconData(icon.codePoint, fontFamily: layer4Family, fontPackage: 'flutty_solar_icons'),
-          color: layer4Color,
+          color: derivedQuaternaryColor,
           size: size,
         ),
       );
     }
 
-    final layer3Color = tertiaryColor ?? secondaryColor;
     final layer3Family = _layerFamily(weight, 3);
-    final hasLayer3 = layer3Color != null && layer3Family != null && _hasLayer(weight, 3);
+    final hasLayer3 = derivedTertiaryColor != null && layer3Family != null && _hasLayer(weight, 3);
 
     final layer2Family = _layerFamily(weight, 2);
-    if (secondaryColor != null && layer2Family != null && _hasLayer(weight, 2)) {
+    if (derivedSecondaryColor != null && layer2Family != null && _hasLayer(weight, 2)) {
       layerChildren.add(
         Icon(
           IconData(icon.codePoint, fontFamily: layer2Family, fontPackage: 'flutty_solar_icons'),
-          color: secondaryColor,
+          color: derivedSecondaryColor,
           size: size,
         ),
       );
@@ -86,7 +82,7 @@ class SolarIcon extends StatelessWidget {
       layerChildren.add(
         Icon(
           IconData(icon.codePoint, fontFamily: layer3Family, fontPackage: 'flutty_solar_icons'),
-          color: layer3Color,
+          color: derivedTertiaryColor,
           size: size,
         ),
       );
@@ -98,7 +94,7 @@ class SolarIcon extends StatelessWidget {
       layerChildren.add(
         Icon(
           IconData(icon.codePoint, fontFamily: layer3Family, fontPackage: 'flutty_solar_icons'),
-          color: layer3Color,
+          color: derivedTertiaryColor,
           size: size,
         ),
       );

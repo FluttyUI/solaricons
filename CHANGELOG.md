@@ -1,5 +1,18 @@
+## 1.0.3
+
+- Bumped package version to `1.0.3`.
+- Synced documentation and install snippet to `^1.0.3`.
+- Updated example manifest version for release consistency.
+
 ## 1.0.2
 
+- Simplified `SolarIcon` color API to two inputs:
+  - `color`
+  - optional `secondaryColor`
+- Added automatic duotone/multitone color derivation:
+  - layer 2: `secondaryColor` or `color.withAlpha(128)`
+  - layer 3: `(secondaryColor ?? color).withAlpha(64)`
+  - layer 4: `(secondaryColor ?? color).withAlpha(32)`
 - Expanded dartdoc coverage across public API to target full documentation quality:
   - `SolarIcon`, `SolarIconData`, `SolarIconWeight`, and `SolarIconWeightX`.
   - All `SolarIcons.*` constants.
