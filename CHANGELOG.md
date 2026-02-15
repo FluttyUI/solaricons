@@ -6,7 +6,7 @@
 - Added multi-layer duotone rendering with optional secondary/tertiary/quaternary colors.
 - Added publishing metadata and example app.
 
-### Fixed
+### 1.0.1
 
 - Fixed `BoldDuotone/Arrows Action/Exit` doorknob rendering and layer order.
 - Fixed `LineDuotone/Network, IT, Programming/Satellite` layer split so all parts render (not a solid block).
