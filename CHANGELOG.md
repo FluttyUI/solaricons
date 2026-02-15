@@ -3,6 +3,7 @@
 - Bumped package version to `1.0.3`.
 - Synced documentation and install snippet to `^1.0.3`.
 - Updated example manifest version for release consistency.
+- Fixed `BoldDuotone/Arrows Action/Exit` knob to render as a transparent cutout (background-visible), not a tinted overlay.
 
 ## 1.0.2
 

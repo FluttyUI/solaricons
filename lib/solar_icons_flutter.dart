@@ -1,4 +1,3 @@
-/// Main library export for Flutty Solar Icons.
 library;
 
 export 'src/solar_icon.dart';
