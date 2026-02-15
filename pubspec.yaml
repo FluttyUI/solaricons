@@ -1,0 +1,64 @@
+name: flutty_solar_icons
+description: Solar icon pack for Flutter by FluttyUI with 6 weights and multi-layer duotone support.
+version: 1.0.0
+homepage: https://solar-icons.vercel.app/
+repository: https://github.com/FluttyUI/solaricons
+topics:
+  - icons
+  - flutter
+  - ui
+  - duotone
+  - design-system
+
+environment:
+  sdk: ^3.10.0
+  flutter: '>=3.19.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+
+  fonts:
+  - family: SolarBold
+    fonts:
+      - asset: assets/fonts/SolarBold.ttf
+  - family: SolarBroken
+    fonts:
+      - asset: assets/fonts/SolarBroken.ttf
+  - family: SolarLinear
+    fonts:
+      - asset: assets/fonts/SolarLinear.ttf
+  - family: SolarOutline
+    fonts:
+      - asset: assets/fonts/SolarOutline.ttf
+  - family: SolarBoldDuotonePrimary
+    fonts:
+      - asset: assets/fonts/SolarBoldDuotonePrimary.ttf
+  - family: SolarBoldDuotoneSecondary
+    fonts:
+      - asset: assets/fonts/SolarBoldDuotoneSecondary.ttf
+  - family: SolarBoldDuotoneTertiary
+    fonts:
+      - asset: assets/fonts/SolarBoldDuotoneTertiary.ttf
+  - family: SolarBoldDuotoneQuaternary
+    fonts:
+      - asset: assets/fonts/SolarBoldDuotoneQuaternary.ttf
+  - family: SolarLineDuotonePrimary
+    fonts:
+      - asset: assets/fonts/SolarLineDuotonePrimary.ttf
+  - family: SolarLineDuotoneSecondary
+    fonts:
+      - asset: assets/fonts/SolarLineDuotoneSecondary.ttf
+  - family: SolarLineDuotoneTertiary
+    fonts:
+      - asset: assets/fonts/SolarLineDuotoneTertiary.ttf
+  - family: SolarLineDuotoneQuaternary
+    fonts:
+      - asset: assets/fonts/SolarLineDuotoneQuaternary.ttf
