@@ -1,3 +1,9 @@
+## 1.0.4
+
+- Bumped package version to `1.0.4`.
+- Fixed `BoldDuotone/Arrows Action/Exit` knob as a true transparent cutout in font outlines.
+- Synced README install version and example manifest version.
+
 ## 1.0.3
 
 - Bumped package version to `1.0.3`.
