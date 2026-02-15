@@ -4,15 +4,30 @@ import 'duotone_layer_codepoints.dart';
 import 'solar_icon_data.dart';
 import 'solar_icon_weight.dart';
 
+/// Renders a Solar icon from [SolarIcons] with an optional weight and colors.
 class SolarIcon extends StatelessWidget {
+  /// The icon glyph to render.
   final SolarIconData icon;
+
+  /// The icon style/weight family.
   final SolarIconWeight weight;
+
+  /// Primary color used for the main glyph layer.
   final Color? color;
+
+  /// Secondary color for duotone icons.
   final Color? secondaryColor;
+
+  /// Optional tertiary color for icons that expose a third layer.
   final Color? tertiaryColor;
+
+  /// Optional quaternary color for icons that expose a fourth layer.
   final Color? quaternaryColor;
+
+  /// Icon size in logical pixels.
   final double? size;
 
+  /// Creates a Solar icon widget.
   const SolarIcon(
     this.icon, {
     super.key,
@@ -24,6 +39,7 @@ class SolarIcon extends StatelessWidget {
     this.size,
   });
 
+  /// Builds the icon with one or more layered glyphs depending on [weight].
   @override
   Widget build(BuildContext context) {
     final primaryData = IconData(

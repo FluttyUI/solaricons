@@ -19,7 +19,7 @@ Add the dependency:
 
 ```yaml
 dependencies:
-  flutty_solar_icons: ^1.0.0
+  flutty_solar_icons: ^1.0.2
 ```
 
 Then run:

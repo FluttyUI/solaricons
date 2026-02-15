@@ -1,5 +1,6 @@
 // GENERATED FILE. DO NOT EDIT.
 
+/// Code points that have a secondary layer in `boldDuotone`.
 const Set<int> boldDuotoneSecondaryCodePoints = {
   0xe001,
   0xe002,
@@ -1243,6 +1244,7 @@ const Set<int> boldDuotoneSecondaryCodePoints = {
   0xe4de,
 };
 
+/// Code points that have a tertiary layer in `boldDuotone`.
 const Set<int> boldDuotoneTertiaryCodePoints = {
   0xe00d,
   0xe013,
@@ -1307,6 +1309,7 @@ const Set<int> boldDuotoneTertiaryCodePoints = {
   0xe4de,
 };
 
+/// Code points that have a quaternary layer in `boldDuotone`.
 const Set<int> boldDuotoneQuaternaryCodePoints = {
   0xe15c,
   0xe15d,
@@ -1322,6 +1325,7 @@ const Set<int> boldDuotoneQuaternaryCodePoints = {
   0xe38a,
 };
 
+/// Code points that have a secondary layer in `lineDuotone`.
 const Set<int> lineDuotoneSecondaryCodePoints = {
   0xe001,
   0xe002,
@@ -2546,6 +2550,7 @@ const Set<int> lineDuotoneSecondaryCodePoints = {
   0xe4de,
 };
 
+/// Code points that have a tertiary layer in `lineDuotone`.
 const Set<int> lineDuotoneTertiaryCodePoints = {
   0xe024,
   0xe0b7,
@@ -2574,6 +2579,7 @@ const Set<int> lineDuotoneTertiaryCodePoints = {
   0xe4b7,
 };
 
+/// Code points that have a quaternary layer in `lineDuotone`.
 const Set<int> lineDuotoneQuaternaryCodePoints = {
   0xe0f6,
   0xe197,
